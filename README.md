@@ -1,80 +1,34 @@
-# Jr Backend Engineer Code Challenge
+# Qualifinds Jr Backend Challenge - Chuck Norris API
 
-- **Estimated time:** 20 minutes
-- **Difficulty:** Junior
-- **Suggested stack:** Any (NodeJS, Python, Ruby, Go, etc.)
+Este proyecto es una API Backend construida con ASP.NET Core (.NET 9.0) que consume la API pública de Chuck Norris y expone los siguientes endpoints:
 
-### Your goal:
+# Endpoints
 
-Build a backend application that
-exposes the endpoints described below, consumes data from the specified public APIs and returns the responses also described below.
+- `GET /categories`  
+  Retorna una lista de categorías disponibles.
 
-#### Context: 
-The Chuck Norris API lets you retrieve random jokes, category-specific jokes, search for jokes
-by keyword, and even personalize jokes with usernames. The original app even predates Slack!
-But for this challenge, we'll focus only on two endpoints.
+- `GET /joke/{category}`  
+  Retorna un chiste aleatorio para la categoría especificada.
 
-### Requirements
+# Tecnologías usadas
 
-#### Expose your app through the port `5000`.
+- .NET 9.0
+- ASP.NET Core Web API
+- Swagger (Swashbuckle.AspNetCore)
+- HttpClient
+- JSON
 
-1. GET `/categories`
+# Cómo correr el proyecto
 
-Returns a list of the available joke categories.
+# 1. Clona el repositorio
+git clone https://github.com/Qualifinds/backend-challenge-jr.git
 
-Internally calls:
-https://api.chucknorris.io/jokes/categories
+# 2. Abre una terminal en la carpeta del repositorio 
+cd backend-challenge-jr
 
-Expected response:
+# 3. Inicia la aplicacion con el comando
+dotnet run
 
-`
-[
-    "A", 
-    "List", 
-    "Of", 
-    "Jokes", 
-    "Categories"
-]
-`
-
-2. GET `joke/{category}`
-
-Returns a random joke from the specified category.
-
-Internally calls:
-https://api.chucknorris.io/jokes/random?category={category}
-
-Expected response:
-
-`{
-    "id" : "requestId",
-    "url" : "publicApiUrl",
-    "category": "TheCategoryReceived",
-    "value" : "The joke in string"
-}`
-
-#### We expect that you...
-
-* Use clear, clean code.
-* Handle edge cases (e.g. invalid category).
-* Return meaningful HTTP status codes.
-* No need for persistence or authentication.
-
-#### Bonus (Optional)
-
-If you finish early, consider adding:
-* A GET /search?query=term endpoint using:
-https://api.chucknorris.io/jokes/search?query=term
-* Validate that the provided category exists before requesting a joke.
-* Input validation & graceful error handling.
-* A README file with setup/run instructions.
-
-#### Evaluation Criteria
-* Functional correctness.
-* Code clarity and structure.
-* Error handling and edge case coverage.
-* Ability to consume and transform external APIs.
-* Code reusability and modularity (if applicable).
-
-### Submit your app
-To submit your app, simply create a new branch and commit your changes.
+# 4. Abre el navegador 
+http://localhost:5000
+http://localhost:5000/swagger
