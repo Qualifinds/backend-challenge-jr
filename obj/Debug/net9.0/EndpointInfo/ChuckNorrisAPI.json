@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "ChuckNorrisAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/categories": {
+      "get": {
+        "tags": [
+          "ChuckNorris"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/joke/{category}": {
+      "get": {
+        "tags": [
+          "ChuckNorris"
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

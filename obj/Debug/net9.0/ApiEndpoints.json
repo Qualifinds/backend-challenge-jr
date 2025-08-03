@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "ChuckNorrisController",
+    "Method": "GetCategories",
+    "RelativePath": "categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChuckNorrisController",
+    "Method": "GetJoke",
+    "RelativePath": "joke/{category}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
